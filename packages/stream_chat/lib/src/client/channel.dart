@@ -589,7 +589,7 @@ class Channel {
     );
     // ignore: parameter_assignments
     message = message.copyWith(
-      localCreatedAt: DateTime.now(),
+      localCreatedAt: DateTime.now().toUtc(),
       user: _client.state.currentUser,
       quotedMessage: quotedMessage,
       state: MessageState.sending,
